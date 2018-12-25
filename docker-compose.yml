@@ -10,7 +10,7 @@ services:
         - "13000:3000"
     networks:
         - piccolo
-    command: nodemon -L app/bin/www
+    restart: unless-stopped
 networks:
     piccolo:
         external:
