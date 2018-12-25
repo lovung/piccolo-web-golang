@@ -1539,7 +1539,7 @@
 		flex-direction: column;
 		position: relative;
 		max-width: 100%;
-		z-index: 3;
+		z-index: 4;
 		overflow: hidden;
 	}
 
