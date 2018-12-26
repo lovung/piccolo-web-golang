@@ -17,5 +17,5 @@ func main() {
 
 	// Start and run the server
 	go router.Run(":3000")
-	router.RunTLS(":3443", "./cert/server.pem", "./cert/server.key")
+	router.RunTLS(":3443", "./cert/piccolo.pem", "./cert/piccolo.key")
 }
