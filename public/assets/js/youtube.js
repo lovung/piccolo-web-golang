@@ -27,12 +27,13 @@ for (n = 0; n < v.length; n++) {
   y.appendChild(c);
   y.onclick = function() {
     var t = document.createElement("iframe");
+    t.setAttribute("id","playing");
     t.setAttribute("src", "https://www.youtube.com/embed/" + this.id + param(this));
     t.style.width = this.style.width;
     t.style.height = this.style.height;
     t.style.position = this.style.position;
     t.style.left = this.style.left;
-    this.parentNode.replaceChild(t, this);
+    this.parentNode.insertBefore(t, this);
   }
 };
 function param(x){

@@ -21,7 +21,6 @@ $(document).ready(function()
     $.global.total = SlideCount;
     
     $('div#slide-window').each(function(index, sw) {
-      console.log(index);
       $(sw).find("span#left").click(function() { Slide('back', index); }); 
       $(sw).find("span#right").click(function() { Slide('forward', index); });
     });

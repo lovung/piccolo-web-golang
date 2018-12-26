@@ -302,6 +302,13 @@
 							.appendTo($this)
 							.on('click', function() {
 								location.hash = '';
+								v = document.getElementsByTagName("iframe");
+								
+								for (n = 0; n < v.length; n++) {
+									if (v[n].id == "playing") {
+										v[n].parentNode.removeChild(v[n]);	
+									}
+								}
 							});
 
 					// Prevent clicks from inside article from bubbling.
