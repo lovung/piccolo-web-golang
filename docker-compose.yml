@@ -8,6 +8,7 @@ services:
         - "./:/go/src/github.com/vu-long/piccolo-web-golang"
     ports:
         - "13000:3000"
+        - "13443:3443"
     networks:
         - piccolo
     restart: unless-stopped

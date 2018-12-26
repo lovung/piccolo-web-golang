@@ -16,5 +16,6 @@ func main() {
 	router.Use(static.Serve("/", static.LocalFile("./public", true)))
 
 	// Start and run the server
-	router.Run(":3000")
+	go router.Run(":3000")
+	router.RunTLS(":3443", "./cert/server.pem", "./cert/server.key")
 }
