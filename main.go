@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/gin-contrib/gzip"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 )
@@ -10,7 +11,7 @@ import (
 func main() {
 
 	router := gin.Default()
-
+	router.Use(gzip.Gzip(gzip.DefaultCompression))
 	// Serve frontend static files
 	router.Use(static.Serve("/", static.LocalFile("./public", true)))
 
