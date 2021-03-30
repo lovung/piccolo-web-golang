@@ -4,8 +4,6 @@ services:
   web:
     image: vulong/piccolo_web:1.0
     build: ./
-    volumes:
-        - "./:/go/src/github.com/lovung/piccolo-web-golang"
     ports:
         - "13000:3000"
         - "13443:3443"
